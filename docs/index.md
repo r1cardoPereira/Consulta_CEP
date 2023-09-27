@@ -38,7 +38,7 @@ pip install -r requirements.txt
 
 ## Comandos
 
-* `uvicorn main:app --reload` - Inicia o servidor web.
+* `uvicorn consulta_cep.main:app --reload` - Inicia o servidor web.
 * `pytest` - Executa os testes automatizados.
 
 ## Estrutura do projeto
@@ -60,6 +60,30 @@ pip install -r requirements.txt
 
 A documentação do projeto está disponível em [localhost:8000/docs](http://localhost:8000/docs) após iniciar o servidor web.
 
+## Observações:
+Projeto desenvolvido em ambiente Linux.
+
+No meu caso, o MongoDB está rodando em um container Docker. Para que o projeto funcione corretamente, é necessário que o container esteja em execução.
+
+se você não tiver o MongoDB instalado em seu sistema, pode usar o seguinte comando para iniciar um container Docker com o MongoDB:
+
+```
+docker run --name mongodb -p 27017:27017 -d mongo
+```
+*Mude a linha no pacote Bootstrap no `mongodb.py` para conectar ao seu banco de dados.
+
+```	
+MONGODB_CLIENT = MongoClient('localhost', 27017)
+```
+Para
+```	
+MONGODB_CLIENT = MongoClient('mongodb', 27017)
+```
+e adicione a seguinte linha no arquivo `/etc/hosts`:
+
+```
+127.0.0.1 mongodb
+```
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.

@@ -7,7 +7,7 @@ from pymongo import MongoClient
 logger = logging.getLogger(__name__) 
 
 
-MONGODB_CLIENT = MongoClient("MONGODB_URI")
+MONGODB_CLIENT = MongoClient('mongodb', 27017)
 
 
 def install(app):
