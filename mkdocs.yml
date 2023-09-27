@@ -1,0 +1,17 @@
+site_name: Consulta CEP
+repo_url: https://github.com/r1cardopereira/consulta_cep
+repo_name: r1cardopereira/consulta_cep
+edit_uri: tree/master/docs
+
+theme:
+  name: material
+  language: pt-BR
+ 
+markdown_extensions:
+  - attr_list
+
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [consulta_cep]

@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "consulta-cep"
+version = "0.1.0"
+description = ""
+authors = ["r1cardoPereira <ricardo.pereira_jr@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.103.1"
+uvicorn = "^0.23.2"
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.4.2"
+mkdocstrings = "^0.23.0"
+pymongo = "^4.5.0"
+requests = "^2.31.0"
+pytest = "^7.4.2"
+pytest-asyncio = "^0.21.1"
+httpx = "^0.25.0"
+mkdocstrings-python = "^1.7.0"
+
+
+[tool.poetry.group.dev.dependencies]
+taskipy = "^1.12.0"
+pytest = "^7.4.2"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pytest.ini_options]
+pythonpath = "."
+
+
+[tool.taskipy.tasks]
+run = 'uvicorn consulta_cep.main:app --reload'
+test = 'pytest -s -x --cov=consulta_cep coverage'
+docs = 'mkdocs serve'
+
