@@ -17,8 +17,33 @@ pip install -r requirements.txt
 Para executar o servidor web, execute o seguinte comando:
 
 ```
-uvicorn main:app --reload
+uvicorn consulta_cep.main:app --reload
 ```
+## Observações:
+Projeto desenvolvido em ambiente Linux.
+
+No meu caso, o MongoDB está rodando em um container Docker. Para que o projeto funcione corretamente, é necessário que o container esteja em execução.
+
+se você não tiver o MongoDB instalado em seu sistema, pode usar o seguinte comando para iniciar um container Docker com o MongoDB:
+
+```
+docker run --name mongodb -p 27017:27017 -d mongo
+```
+*Mude a linha no pacote Bootstrap no `mongodb.py` para conectar ao seu banco de dados.
+
+```	
+MONGODB_CLIENT = MongoClient('localhost', 27017)
+```
+Para
+```	
+MONGODB_CLIENT = MongoClient('mongodb', 27017)
+```
+e adicione a seguinte linha no arquivo `/etc/hosts`:
+
+```
+127.0.0.1 mongodb
+```
+
 
 Em seguida, acesse o seguinte URL em seu navegador:
 
