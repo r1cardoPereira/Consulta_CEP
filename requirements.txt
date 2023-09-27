@@ -1,0 +1,7 @@
+pymongo
+requests
+pytest
+pytest-asyncio
+httpx
+fastapi
+uvicorn
