@@ -52,7 +52,7 @@ http://localhost:8000/address/{cep}
 
 Substitua `{cep}` pelo CEP que deseja pesquisar.
 
-# Para mais informações sobre a API, acesse a documentação:
+## Para mais informações sobre a API, acesse a documentação:
 
 [Documentação Completa](https://r1cardopereira.github.io/consulta-cep/)
 
