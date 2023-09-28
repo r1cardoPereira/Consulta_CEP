@@ -3,6 +3,8 @@
 
 Este é um projeto simples que permite buscar informações de endereço a partir de um CEP usando a API ViaCEP.
 
+* Para mais informações consulte a [Documentação Completa](https://r1cardopereira.github.io/Consulta_CEP/).
+
 ## Instalação
 
 Para instalar as dependências do projeto, execute o seguinte comando:
@@ -51,10 +53,6 @@ http://localhost:8000/address/{cep}
 ```
 
 Substitua `{cep}` pelo CEP que deseja pesquisar.
-
-## Para mais informações sobre a API, acesse a documentação:
-
-[Documentação Completa](https://r1cardopereira.github.io/Consulta_CEP/)
 
 ## Contribuição
 
