@@ -8,16 +8,24 @@ site_dir: site
 theme:
   name: material
   palette:
-    scheme: default
-    toggle:
-      icon: material/lightbulb
-      name: Switch to Dark Mode
-    accent: pink
-    primary: indigo
-    toggle:
-      icon: material/lightbulb-outline
-      name: Switch to Light Mode
-    scheme: dark
+    - scheme: default
+      primary: indigo
+      accent: pink
+      background: '#fafafa'
+      foreground: '#212121'
+      toggle:
+        icon: material/lightbulb
+        name: Switch to Dark Mode
+        style: switch
+    - scheme: slate
+      primary: indigo
+      accent: pink
+      background: '#212121'
+      foreground: '#fafafa'
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to Light Mode
+        style: switch
  
 markdown_extensions:
   - attr_list
