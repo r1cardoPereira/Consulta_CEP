@@ -2,7 +2,8 @@ site_name: Consulta CEP
 repo_url: https://github.com/r1cardopereira/consulta_cep
 repo_name: r1cardopereira/consulta_cep
 edit_uri: tree/master/docs
-site_dir: docs
+docs_dir: docs
+site_dir: site
 
 theme:
   name: material
