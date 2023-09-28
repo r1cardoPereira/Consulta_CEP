@@ -37,13 +37,13 @@ class CepNotFoundException(Exception):
 
 
 @app.exception_handler(CepNotFoundException)
-async def cep_not_found_handler(request: Request, exc: CepNotFoundException):
+async def cep_not_found_handler(request: Request, exc: CepNotFoundException) -> JSONResponse:
     """
     Lida com caso em que o CEP não é encontrado.
 
     Args:
-       request (Request): O objeto de requisição.
-        exc (CepNotFoundException): O objeto de exceção.
+         request (Request): O objeto de requisição.
+         exc (CepNotFoundException): O objeto de exceção.
 
     Returns:
        JSONResponse: Uma resposta JSON com um código de status 404 e uma mensagem indicando que o CEP não foi encontrado.
@@ -52,7 +52,7 @@ async def cep_not_found_handler(request: Request, exc: CepNotFoundException):
 
 
 @app.get("/address", response_model=schemas.AddressOutput)
-async def search_address(state: Optional[str] = None):
+async def search_address(state: Optional[str] = None) -> List[dict]:
     """
     Searches for addresses in the database based on the given state.
 
@@ -127,7 +127,7 @@ async def search_address_by_cep(cep: str) -> dict:
 
 
 @app.post("/address", response_model=schemas.AddressOutput, status_code=201)
-async def create_address(address: schemas.AddressInput):
+async def create_address(address: schemas.AddressInput) -> schemas.AddressInput:
     """
     Crie um novo endereço no banco de dados.
 
@@ -164,7 +164,7 @@ async def create_address(address: schemas.AddressInput):
 
 
 @app.put("/address/{cep}", status_code=status.HTTP_204_NO_CONTENT)
-async def update_address(cep: str, address: schemas.AddressInput):
+async def update_address(cep: str, address: schemas.AddressInput) -> None:
     """
     Atualize um endereço existente no banco de dados com o CEP fornecido.
 
@@ -199,7 +199,7 @@ async def update_address(cep: str, address: schemas.AddressInput):
 
 
 @app.get("/addresses", response_model=List[schemas.AddressOutput])
-async def list_addresses():
+async def list_addresses() -> {List[schemas.AddressOutput]}:
     """
     Lista todos os endereços no banco de dados.
 

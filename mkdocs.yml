@@ -5,14 +5,10 @@ edit_uri: tree/master/docs
 
 theme:
   name: material
-  language: pt-BR
-
   palette:
-    primary: black
-    accent: blue
-    toggle:
-      icon: menu
-      name: Menu
+    primary: indigo
+    accent: pink
+    scheme: dark
  
 markdown_extensions:
   - attr_list
