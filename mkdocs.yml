@@ -8,8 +8,15 @@ site_dir: site
 theme:
   name: material
   palette:
-    primary: indigo
+    scheme: default
+    toggle:
+      icon: material/lightbulb
+      name: Switch to Dark Mode
     accent: pink
+    primary: indigo
+    toggle:
+      icon: material/lightbulb-outline
+      name: Switch to Light Mode
     scheme: dark
  
 markdown_extensions:
