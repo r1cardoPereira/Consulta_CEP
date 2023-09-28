@@ -1,4 +1,3 @@
-GitHub Copilot: Claro, aqui está um exemplo de README básico para o seu projeto:
 
 # Consulta CEP
 

@@ -23,8 +23,8 @@ class AddressInput(BaseModel):
     bairro: str
     localidade: str
     uf: str
-    ibge: str
-    gia: int
+    ibge: Optional[str] = None
+    gia: Optional[int] = None
     ddd: int
 
 
@@ -46,3 +46,4 @@ class AddressOutput(BaseModel):
     bairro: str
     localidade: str
     uf: str
+    ddd: int

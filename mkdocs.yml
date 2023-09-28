@@ -6,6 +6,13 @@ edit_uri: tree/master/docs
 theme:
   name: material
   language: pt-BR
+
+  palette:
+    primary: black
+    accent: blue
+    toggle:
+      icon: menu
+      name: Menu
  
 markdown_extensions:
   - attr_list

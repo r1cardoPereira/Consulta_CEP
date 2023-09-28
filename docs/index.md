@@ -12,25 +12,25 @@ Antes de começar, certifique-se de ter o Python 3 e o pip instalados em seu sis
 
 ## Instalação
 
-1. Clone o repositório do projeto:
+* Clone o repositório do projeto:
 
 ```
 git clone https://github.com/r1cardopereira/consulta_cep.git
 ```
 
-2. Crie um ambiente virtual para o projeto:
+* Crie um ambiente virtual para o projeto:
 
 ```
 python3 -m venv env
 ```
 
-3. Ative o ambiente virtual:
+* Ative o ambiente virtual:
 
 ```
 source env/bin/activate
 ```
 
-4. Instale as dependências do projeto:
+* Instale as dependências do projeto:
 
 ```
 pip install -r requirements.txt
@@ -70,12 +70,13 @@ se você não tiver o MongoDB instalado em seu sistema, pode usar o seguinte com
 ```
 docker run --name mongodb -p 27017:27017 -d mongo
 ```
-*Mude a linha no pacote Bootstrap no `mongodb.py` para conectar ao seu banco de dados.
+Mude a linha no modulo: `mongodb.py` para conectar ao seu banco de dados.
 
+De:
 ```	
 MONGODB_CLIENT = MongoClient('localhost', 27017)
 ```
-Para
+Para:
 ```	
 MONGODB_CLIENT = MongoClient('mongodb', 27017)
 ```
